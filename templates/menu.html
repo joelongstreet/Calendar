@@ -1,0 +1,46 @@
+
+<div>
+
+<div class='menuIcon' ng-click='menuOpen = !menuOpen ' ng-show='screenSmall'>
+    <i class='fa fa-minus iconBar' ng-class='{"barOne" : menuOpen}'></i>
+    <i class='fa fa-minus iconBar' ng-hide='menuOpen' ng-class='{"barTwo" : menuOpen}'></i>
+    <i class='fa fa-minus iconBar' ng-class='{"barThree" : menuOpen}'></i>
+  </div>
+
+  <nav ng-show='menuOpen || !screenSmall' ng-cloak>
+    <ul class='menuList'>
+      <li class='menuItem'>
+        <a class='menuLink'>
+          <span class="menuLinkText" ng-show='screenSmall'>Month</span>
+          <span title='Month View' class="fa-stack" ng-hide='screenSmall'>
+            <i class="fa fa-calendar-o fa-stack-2x"></i>
+            <span class="fa fa-stack-1x faCalendarText">Mon</span>
+          </span>
+        </a>
+      </li>
+      <li class='menuItem'>
+        <a class='menuLink'>
+          <span class="menuLinkText" ng-show='screenSmall'>Week</span>
+          <span title='Week View' class="fa-stack" ng-hide='screenSmall'>
+            <i class="fa fa-calendar-o fa-stack-2x"></i>
+            <span class="fa fa-stack-1x faCalendarText">Wk</span>
+          </span>
+        </a>
+      </li>
+      <li class='menuItem'>
+        <a class='menuLink'>
+          <span class="menuLinkText" ng-show='screenSmall'>Tasks</span>
+          <i title='Tasks' class="fa fa-list fa-lg" ng-hide='screenSmall'></i>
+        </a>
+      </li>
+      <li class='menuItem'>
+        <a class='menuLink'>
+          <span class="menuLinkText" ng-show='screenSmall'>Notes</span>
+          <i title='Notes' class="fa fa-sticky-note-o fa-lg" ng-hide='screenSmall'></i>
+        </a>
+      </li>
+    </ul>
+  
+</nav>
+  
+</div>

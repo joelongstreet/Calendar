@@ -1,0 +1,192 @@
+*
+{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html,
+body{
+  background: #D5EBE3;
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.wrapper{
+  background: #5DB897;
+  height: 100vh;
+  margin: auto;
+  width: 100%;
+}
+
+.menuIcon{
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  left: 5vw;
+  outline: none;
+  padding: 2%;
+  position: absolute;
+  text-align: center;
+  transform: scale(2,0.5);
+  width: auto;
+  z-index: 1000;
+}
+
+.iconBar{
+  transition: all 0.5s;
+}
+
+.barOne{
+  left: 30%;
+  top: 200%;
+  transform: rotate(78deg) scale(4,0.5);
+  position: absolute;
+}
+
+.barTwo{
+  opacity: 0;
+  position:absolute;
+  top: 200%;
+}
+
+.barThree{
+  left: 30%;
+  top: 200%;
+  transform: rotate(-78deg) scale(4,0.5);
+  position: absolute;
+}
+
+nav{
+  background: dimgray;
+  background: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  z-index: 500;
+}
+
+.menuList{
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  justify-content: space-around;
+  padding-left: 0;
+  padding-top: 10%;
+  width: 100%;
+}
+
+.menuItem{
+  list-style: none;
+  text-align: center;
+  font-size: 2em;
+}
+
+.menuLink.menuLink{
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menuLink:hover.menuLink:hover{
+  color: #D8D8D8;
+}
+
+.menuLinkText{
+  transition: all 0.5s;
+}
+
+.fa-stack{
+  font-size: 0.72em;
+}
+
+.faCalendarText.faCalendarText{
+    font-size: 0.68em;
+    margin-top: 5px;
+  }
+  
+
+.calendarHead{
+  align-items: center;
+  flex-wrap: nowrap;
+  font-size: 2em;
+  height: 10vh;
+  justify-content: space-around;
+  margin: auto;
+  width: 75%;
+}
+
+.fa-caret-right,
+.fa-caret-left{
+  cursor: pointer;
+  padding: 5%;
+  outline: none;
+}
+
+.year{
+  max-height: 20vh;
+  min-width: auto;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+select {
+  background: inherit;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+select:active,
+select:hover {
+  outline: none;
+}
+
+option {
+  font-size: 0.6em;
+}
+
+.flex-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-item{
+  flex: 1 14.28%;
+  max-width: 14.28%;
+}
+
+.daysOfWeek{
+  height: 6vh;
+  text-align: center;
+}
+
+
+.calendarBody{
+  flex-wrap: wrap;
+}
+
+.dateBox{
+   height: 14vh;
+}
+
+.date{
+  background: #C5D3DB;
+  height: 100%;
+  padding: 0.4em;
+}
+
+.date-hover:hover{
+  font-weight: bold;
+  opacity: 0.5;
+}
+

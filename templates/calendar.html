@@ -1,0 +1,58 @@
+
+        
+          <div class='app-container'>
+            
+            
+            
+<!-- /////////////////////////
+    //   Calendar Header   //
+   ///////////////////////// -->           
+            <div class= 'calendarHead flex-container'>
+              
+        <!--   Previous Month  -->
+              
+              <i class="fa fa-caret-left" ng-click='prevMonth()'></i>
+              
+        <!--  Currently Selected Month   -->       
+              
+              <div class='month' ng-bind='months[selectedMonth]'></div>
+              
+        <!--  Select Year  -->    
+              
+             <div>
+               <select ng-init='selectedYear= years[99] + ""' ng-model='selectedYear' ng-change='changeYear()' ng-cloak>
+                 <option ng-repeat='year in years' ><span>{{year}}</span></option>
+               </select>
+             </div>          
+              
+        <!--  Next Month  -->
+              
+              <i class="fa fa-caret-right" ng-click='nextMonth()'></i>
+              
+            </div>
+            
+<!-- Calendar Heading End -->            
+ 
+<!-- /////////////////////////
+    //   Days of the Week  //
+   ///////////////////////// --> 
+            
+            <div class="flex-container">
+                <div class='flex-item daysOfWeek' ng-repeat='day in daysOfWeek'><p class='dayText' ng-cloak>{{day}}</p></div>
+            </div> 
+            
+<!-- ///////////////////////
+    //   Calendar Body   //
+   /////////////////////// -->            
+            <div class="flex-container calendarBody" >
+              
+       <!-- Date Boxes -->
+              
+              <div class='flex-item dateBox' ng-repeat='date in dates track by $index'>
+                <div class='date date-hover' id='{{months[selectedMonth]}} {{date}}, {{selectedYear}}' title='{{months[selectedMonth]}} {{date}}, {{selectedYear}}' ng-cloak>{{date}}</div>
+              </div>
+              
+            </div>
+<!-- Calendar Body End -->
+          </div>
+        

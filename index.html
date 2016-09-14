@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calendar App</title>
+ 
+<!-- //////////////////////////
+    ///     Stylesheets    ///
+   //////////////////////////-->    
+    
+<!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+    
+<!--  Normalize CSS  -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    
+<!--  Twitter Bootstrap  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    
+<!--  Main CSS  -->
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    
+<!--  Media Queries  -->
+    <link rel="stylesheet" type="text/css" href="style/mediaQueries.css">
+    
+<!--  Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    
+  </head>
+<div ng-controller='mainCtrl'>  
+  
+<!-- //////////////////////////
+    ///     Navigation     ///
+   //////////////////////////-->
+  
+  <ng-menu></ng-menu>
+
+<!-- ///////////////////////
+    ///       Body      ///
+   ///////////////////////-->  
+  
+  <body>
+    
+    <div class='wrapper'> 
+      <div class='col'>
+        <div class='col-flexbox'>
+      <!-- Add Task -->
+  
+          <div class="addTask" >
+            <div class="slide1" >
+              <div class='addTaskBtn'>
+                <p class="hideText">New Task</p>
+                <i class='fa fa-plus-circle fa-inverse'></i>  
+              </div>
+            </div>
+            <div class='slide2'></div>
+          </div>
+<!--
+            <div class='addTask-heading'>Add Task</div>
+            <div>
+              <label for=title>Title: </label>
+              <input type="text" id='title' ng-model='addTaskTitle'>
+            </div>
+            <div>
+              <label for=description>Description: </label>
+              <textarea rows:'5' cols:'50' id='description' ng-model='addTaskDescription'></textarea>
+            </div>
+-->
+             
+        
+      <!--  Calendar  -->
+          
+          <ng-calendar></ng-calendar>
+        
+        </div>
+      </div>
+      
+      
+      <div class="col colTwo">
+          <div class='schedule'>
+            <div class="scheduleDate">
+              <p class="scheduleDateText"></p>
+            </div>
+            <div class='scheduleTimes'>
+              <div class='scheduleHour' ng-repeat='time in times'>
+                <p class='hourText'>{{time}}</p>
+              </div>
+            </div>
+          </div>
+      </div>
+      
+        
+      <div class="col colThree">
+        <div class="col-flexbox"></div>
+      </div>
+    </div>
+    
+    
+<!-- //////////////////////////
+    ///       Scripts      ///
+   //////////////////////////-->
+<!--  Font Awesome  -->
+    <script src="https://use.fontawesome.com/0ab69eb11e.js"></script>
+    
+<!-- JQuery -->
+    <script   src="https://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
+    
+<!--  AngularJS Libraries -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-animate.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-touch.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.7/angular-sanitize.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+ 
+<!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+    
+<!--  App Script  -->
+    <script type="text/javascript" src="scripts/app.js" ></script>
+    
+<!-- Directives -->
+    <script type="text/javascript" src="directives/ngCalendar.js"></script>
+    <script type="text/javascript" src="directives/ngMenu.js"></script>
+    
+<!-- Controllers -->
+    <script type="text/javascript" src="controllers/mainCtrl.js"></script>
+    
+    
+<!--  Templates  -->
+    <script type="text/ng-template" id="templates/calendar.html"></script>
+    <script type="text/ng-template" id="templates/menu.html"></script>
+    
+
+  </body>
+  <footer>
+  
+  </footer>
+  </div>
+</html>
