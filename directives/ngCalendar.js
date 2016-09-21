@@ -4,7 +4,7 @@ app.directive('ngCalendar', function(){
     
     restrict: "E",
    
-    templateUrl: '/templates/calendar.html'
+    templateUrl: '/Calendar/templates/calendar.html'
     
   }
   
