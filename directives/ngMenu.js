@@ -4,7 +4,7 @@ app.directive('ngMenu', function(){
     
     restrict: "E",
     replace: "true",
-    templateUrl: '/Calendar/templates/menu.html'
+    templateUrl: 'templates/menu.html'
     
   }
   
