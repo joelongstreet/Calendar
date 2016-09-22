@@ -77,6 +77,13 @@
     font-size: 1.5em;
   }
 
+  .fa-user.fa-user
+  {
+    color: dimgray;
+    opacity: 0.76;
+    font-size: 1.2em;
+  }
+
 .faCalendarText.faCalendarText{
     font-size: 0.7em;
   }
