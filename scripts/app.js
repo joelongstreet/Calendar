@@ -1,1 +1,3 @@
-var app= angular.module('myApp', ['ngAnimate', 'ngAria', 'ngMessages', 'ngMaterial']);
+var app= angular.module('myApp', ['ui.calendar']);
+
+
