@@ -42,7 +42,7 @@ app.controller('mainCtrl', function($scope)
         header:{
           left: '',
           center: 'title',
-          right: ''
+          right: 'prev, next'
         },
         eventClick: $scope.alertEventOnClick,
         eventDrop: $scope.alertOnDrop,
