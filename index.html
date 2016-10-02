@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html ng-app='myApp'>
   <head>
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   </head>
   <body>
-  <div ng-controller='mainCtrl'>
-    <div ng-controller='calendarCtrl'>
-      <div ui-calendar='uiConfig.calendar' ng-model='eventSources' id='calendar'></div>
-    </div>
+  <div ng-controller='mainCtrl' class='container'>
+    <div class="row">
+      <div ng-controller='calendarCtrl' class='col-md-6'>
+        <div ui-calendar='uiConfig.calendar' ng-model='eventSources'></div>
+      </div>
 
-    <div ng-controller='scheduleCtrl'>
-       <div ui-calendar='uiConfig.calendar' ng-model='eventSources' class='schedule'></div>
+      <div ng-controller='scheduleCtrl' class='col-md-6'>
+         <div ui-calendar='uiConfig.calendar' ng-model='eventSources' class='schedule'></div>
+      </div>
     </div>
   </div>
 
