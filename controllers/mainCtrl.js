@@ -34,15 +34,17 @@ app.controller('mainCtrl', function($scope)
 
     }
 
+
+
     /* config object */
     $scope.uiConfig = {
       calendar:{
-        height: 450,
+        contentHeight: 400,
         editable: true,
         header:{
-          left: '',
+          left: 'prev',
           center: 'title',
-          right: 'prev, next'
+          right: 'next'
         },
         eventClick: $scope.alertEventOnClick,
         eventDrop: $scope.alertOnDrop,
@@ -50,5 +52,10 @@ app.controller('mainCtrl', function($scope)
         dayClick: $scope.alertDayClick
       }
     };
+
+    angular.element('.fa-plus').click(function(event)
+    {
+        $scope.$broadcast('addTask', event);
+    });
 
 });

@@ -7,6 +7,18 @@ app.controller('scheduleCtrl', function($scope, uiCalendarConfig)
 		
 		angular.element('.schedule').fullCalendar('gotoDate', moment(data));
 
+
+	});
+
+	$scope.$on('addTask', function(event, data){
+
+		var time = $scope.time;
+
+		 var newEvent = { title: 'render', start: '2016-10-04T05:00' };
+
+        angular.element('.schedule').fullCalendar('renderEvent', newEvent);
+
+        console.log('' + $scope.date);
 	});
 
 	
@@ -15,6 +27,7 @@ app.controller('scheduleCtrl', function($scope, uiCalendarConfig)
 	 $scope.uiConfig = {
       calendar:{
       	defaultView: 'agendaDay',
+      	height: 600,
       	header: {
       		left: '',
       		center: 'title',

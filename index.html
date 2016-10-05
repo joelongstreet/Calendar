@@ -1,22 +1,42 @@
 <!DOCTYPE html>
 <html ng-app='myApp'>
   <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style/style.css">
   </head>
   <body>
-  <div ng-controller='mainCtrl' class='container'>
+  <div ng-controller='mainCtrl' class='container main'>
     <div class="row">
-      <div ng-controller='calendarCtrl' class='col-md-6'>
-        <div ui-calendar='uiConfig.calendar' ng-model='eventSources'></div>
+
+      <div class='col-md-4'>
+
+      <div class="addTask">
+        <form>
+        <input id='addTaskTitle' name="title" ng-model='title'>
+        <input id='addTaskDate' type="date" name="date" ng-model='date'>
+        <input id='addTaskTime' type="time" name="time" ng-model='time'>
+        <i class='fa fa-plus fa-1x'></i>
+        </form>
       </div>
 
-      <div ng-controller='scheduleCtrl' class='col-md-6'>
+        <div ng-controller='calendarCtrl' class=''>
+          <div ui-calendar='uiConfig.calendar' ng-model='eventSources'></div>
+        </div>
+
+      </div>
+
+      <div ng-controller='scheduleCtrl' class='col-md-4'>
          <div ui-calendar='uiConfig.calendar' ng-model='eventSources' class='schedule'></div>
       </div>
     </div>
   </div>
 
-    <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css"/>
+<!-- fullcalendar stylesheet -->
+<link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css"/>
+
 <!-- jquery, moment, and angular have to get included before fullcalendar -->
 <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
@@ -25,8 +45,13 @@
 <script type="text/javascript" src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
 <script type="text/javascript" src="bower_components/fullcalendar/dist/gcal.js"></script>
 
+<!-- Font Awesome -->
+<script src="https://use.fontawesome.com/0ab69eb11e.js"></script>
+
+<!-- App -->
 <script type="text/javascript" src='scripts/app.js'></script>
 
+<!-- Controllers -->
 <script type="text/javascript" src='controllers/mainCtrl.js'></script>
 <script type="text/javascript" src='controllers/calendarCtrl.js'></script>
 <script type="text/javascript" src='controllers/scheduleCtrl.js'></script>
